@@ -6,7 +6,7 @@
 /*   By: pokpalae <pokpalae@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 21:56:43 by pokpalae          #+#    #+#             */
-/*   Updated: 2024/09/29 20:05:14 by pokpalae         ###   ########.fr       */
+/*   Updated: 2024/09/30 13:07:40 by pokpalae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	print_status(t_ph_status status, t_ph *philo)
 		end_time = get_b(&philo->data->access_mutex, &philo->data->end_time);
 		if ((status == TAKES_LEFTFORK || status == TAKES_RIGHTFORK)
 			&& !end_time)
-			printf(WHITE "%-5ld"RESET"%d has taken a fork\n", elapsed,
+			printf(CYAN"%-5ld %d has taken a fork\n", elapsed,
 				philo->ph_id);
 		else if (status == EATING && !end_time)
 			printf(WHITE"%-5ld"GREEN"%d is eating\n" RESET, elapsed,
@@ -34,7 +34,7 @@ void	print_status(t_ph_status status, t_ph *philo)
 		else if (status == SLEEPING && !end_time)
 			printf(WHITE"%-5ld"RESET"%d is sleeping\n", elapsed, philo->ph_id);
 		else if (status == THINKING && !end_time)
-			printf(WHITE"%-5ld"RESET" %d is thinking\n", elapsed, philo->ph_id);
+			printf(YELLOW"%-5ld %d is thinking\n", elapsed, philo->ph_id);
 		else if (status == DIED)
 			printf(RED "%-5ld %d died\n" RESET, elapsed, philo->ph_id);
 	}

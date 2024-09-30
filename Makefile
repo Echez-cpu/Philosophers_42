@@ -6,7 +6,7 @@
 #    By: pokpalae <pokpalae@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 22:30:28 by pokpalae          #+#    #+#              #
-#    Updated: 2024/09/29 18:47:58 by pokpalae         ###   ########.fr        #
+#    Updated: 2024/09/30 12:52:09 by pokpalae         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,3 +79,4 @@ help:
 	@echo "\033[1;36mmake leaks\033[0m   Check for memory leaks in macOS"
 	@echo "\033[1;36mmake valgrind_leaks\033[0m   Check for leaks with valgrind in linux"
 	@echo "\033[1;36mmake tsan_leaks\033[0m   Check for data races with ThreadSanitizer"
+	@echo "\033[1;36mmake tsan_leaks\033[0m  Don't run -fsanitize=thread with valgrind"
